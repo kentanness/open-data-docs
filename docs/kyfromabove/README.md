@@ -28,6 +28,7 @@ The KyFromAbove imagery data resources are organized in folders based on data ty
 
 <b><u>Obliques: </u></b> <code>obliques/</code> - KyFromAbove oblique imagery can be found in this folder. The four oblique views, associated with each nadir image, are provided in a 3-band (RGB) Cloud Optimized GeoTiff format using the default 512x512 tile setting. Phase 3 data is being provided upon completion of each acquisition area of interest. It is organized by year and season (where Season1 = Spring and Season2 = Fall) as imagery is being acquired during the fall and spring leaf-off seasons as sun angle and weather conditions permit. *Note: There are no oblique images available for Phase 1 and 2.*
 
+<b><u>Cloud Storage Connection Files: </u></b> <code>CloudStorageConnectionFiles/</code> - A Cloud Storage Connections file for use within ArcGIS Pro is located in this directoy. It allows for direct access to individual images for display and processing.
 
 ### Project Phase Folder Naming Conventions
 
@@ -61,6 +62,14 @@ Metadata and tile grid folders can be found at the root level within each projec
 
 <b><u>TileGrid: </u></b> <code>TileGrid/</code> - Geopackages that contain the name, file extents, phase and other information for each COG.
 
+### Oblique Imagery Flight Information Data
+
+Flight information data folders can be found at the root level within each oblique imagery project phase folder.
+
+<b><u>FlightInformationData_FGDB: </u></b> <code>FlightInformationData_FGDB/</code> -  File-geodatabases that contain Image Frame Boundary, Centroids, Frames, and Exterior Orientation data files for each Phase 3 flight season. These files are necessary for building an oriented imagery catalog, layer or dataset.
+
+<b><u>FlightInformationData_GPKG: </u></b> <code>FlightInformationData_GPKG/</code> -  Geopackages that contain Image Frame Boundary, Centroids, Frames, and Exterior Orientation data files for each Phase 3 flight season. These files are necessary for building an oriented imagery catalog, layer or dataset.
+
 ## Elevation Folder Structure
 
 The KyFromAbove elevation data resources are organized in folders based on data type > project phase. The year each tile was acquired can be found in the tile grid for that phase. 
@@ -74,6 +83,8 @@ The KyFromAbove elevation data resources are organized in folders based on data 
 <b><u>KyTopoMapSeries: </u></b> <code>KyTopoMapSeries/</code> - There are three data resources in this folder - 1) KyTopo Map Series quadrangles in a Cloud Optimized GeoTIFF (COG) format, 2) KyTopo Map Series quadrangles with all collar information in a non-georeferenced PNG format for printing on a standard ARCH-D sized sheet, and 3) the KyTopo Map Series quadrangles tile grid in a geopackage format. The COGs were created using GDAL with JPEG compression at a 90% quality setting and the default 512x512 tile setting.
 
 <b><u>Spot Elevations: </u></b> <code>Spot Elevations/</code> - The data in this bucket includes spot elevations for the entire Commonwealth of Kentucky generated from the KyFromAbove Phase 1 LiDAR-derived digital elevation model (DEM) in a geopackage format. ArcGIS was used to create this dataset. Spot elevations for Phase 2 and Phase 3 will be generated upon completion of each Phase.
+
+<b><u>Cloud Storage Connection Files: </u></b> <code>CloudStorageConnectionFiles/</code> - A Cloud Storage Connections file for use within ArcGIS Pro is located in this directoy. It allows for direct access to individual DEMs and COPC files for display and processing.
 
 ### Project Phase Folder Naming Conventions
 
@@ -92,7 +103,6 @@ Metadata and tile grid folders can be found at the root level within each projec
 <b><u>Metadata: </u></b> <code>Metadata/</code> - Project-level metadata files in XML format for each year during a given project phase.
 
 <b><u>TileGrid: </u></b> <code>TileGrid/</code> -  Geopackages that contain the name, file extents, phase and other information for each COG.
-
 
 ## Imagery Processing Information
 
